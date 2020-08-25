@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  "slim builder":
+  slim builder:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,7 +21,7 @@ jobs:
           dockerfile: Dockerfile
           tags: builder-2.7.1-slim-buster,builder-2.7-slim-buster,builder-2.7-slim,builder-slim
 
-  "alpine builder":
+  alpine builder:
     runs-on: ubuntu-latest
 
     steps:
@@ -37,7 +37,7 @@ jobs:
           dockerfile: Dockerfile-alpine
           tags: builder-2.7.1-alpine,builder-2.7-alpine,builder-2.7.1,builder-2.7,builder-alpine,builder-latest
 
-  "slim production":
+  slim production:
     runs-on: ubuntu-latest
 
     steps:
@@ -53,7 +53,7 @@ jobs:
           dockerfile: Dockerfile
           tags: production-2.7.1-slim-buster,production-2.7-slim-buster,production-2.7-slim,production-slim
   
-  "alpine production":
+  alpine production:
     runs-on: ubuntu-latest
 
     steps:
