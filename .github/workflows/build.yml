@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  slim-builder:
+  builder_slim:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,10 +18,10 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
           repository: jiting/rails-base
           path: builder
-          dockerfile: ./Dockerfile
+          dockerfile: builder/Dockerfile
           tags: builder-2.7.1-slim-buster,builder-2.7-slim-buster,builder-2.7-slim,builder-slim
 
-  alpine-builder:
+  builder_alpine:
     runs-on: ubuntu-latest
 
     steps:
@@ -34,10 +34,10 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
           repository: jiting/rails-base
           path: builder
-          dockerfile: ./Dockerfile-alpine
+          dockerfile: builder/Dockerfile-alpine
           tags: builder-2.7.1-alpine,builder-2.7-alpine,builder-2.7.1,builder-2.7,builder-alpine,builder-latest
 
-  slim-production:
+  production_slim:
     runs-on: ubuntu-latest
 
     steps:
@@ -52,7 +52,7 @@ jobs:
           dockerfile: production/Dockerfile
           tags: production-2.7.1-slim-buster,production-2.7-slim-buster,production-2.7-slim,production-slim
   
-  alpine-production:
+  production_alpine:
     runs-on: ubuntu-latest
 
     steps:
