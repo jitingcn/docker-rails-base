@@ -2,16 +2,36 @@ name: Build images
 
 on:
   push:
+    branches:
+      - master
+  pull_request:
   workflow_dispatch:
 
 jobs:
-  builder_slim:
+  test:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
+        
+      - name: test build builder image
+        if: github.ref != 'refs/heads/master'
+        working-directory: ./builder
+        run: docker build -f Dockerfile-alpine .
+        
+      - name: test build production image
+        if: github.ref != 'refs/heads/master'
+        working-directory: ./production
+        run: docker build -f Dockerfile-alpine .
+        
+  builder_slim:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
           
       - name: Build and push slim builder image
+        if: github.ref == 'refs/heads/master'
         uses: docker/build-push-action@v1
         with:
           username: jiting
@@ -28,6 +48,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build and push alpine builder image
+        if: github.ref == 'refs/heads/master'
         uses: docker/build-push-action@v1
         with:
           username: jiting
@@ -44,6 +65,7 @@ jobs:
       - uses: actions/checkout@v2
           
       - name: Build and push slim production image
+        if: github.ref == 'refs/heads/master'
         uses: docker/build-push-action@v1
         with:
           username: jiting
@@ -59,6 +81,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build and push alpine production image
+        if: github.ref == 'refs/heads/master'
         uses: docker/build-push-action@v1
         with:
           username: jiting
