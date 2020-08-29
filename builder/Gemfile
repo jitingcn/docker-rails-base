@@ -10,7 +10,7 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 gem 'pg', '>= 0.18', '< 2.0'
 
 # Puma is a simple, fast, threaded, and highly concurrent HTTP 1.1 server for Ruby/Rack applications (http://puma.io)
-gem 'puma', github: "puma/puma"
+gem 'puma'
 
 gem "dotenv-rails"
 
@@ -41,7 +41,7 @@ gem 'strip_attributes'
 gem 'pagy'
 
 # A modern, responsive admin framework for Ruby on Rails (https://www.trestle.io)
-gem 'trestle'
+# gem 'trestle'
 
 # Flexible authentication solution for Rails with Warden (https://github.com/heartcombo/devise)
 gem 'devise'
@@ -82,13 +82,13 @@ gem 'sidekiq'
 gem 'geocoder'
 
 # Collection of SEO helpers for Ruby on Rails. (http://github.com/kpumuk/meta-tags)
-gem 'meta-tags'
+# gem 'meta-tags'
 
 # Intelligent search made easy with Rails and Elasticsearch (https://github.com/ankane/searchkick)
-gem 'searchkick'
+# gem 'searchkick'
 
 # Inertia adapter for Rails (https://github.com/inertiajs/inertia-rails)
-gem 'inertia_rails'
+# gem 'inertia_rails'
 
 # Markdown that smells nice (http://github.com/vmg/redcarpet)
 gem 'redcarpet'
