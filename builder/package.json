@@ -9,7 +9,7 @@
     "core-js": "^3.6.5",
     "lodash": "^4.17.19",
     "stimulus": "^1.1.1",
-    "tailwindcss": "^1.8.9",
+    "tailwindcss": "^1.8.10",
     "tailwindcss-dark-mode": "^1.1.4",
     "turbolinks": "^5.2.0"
   }
