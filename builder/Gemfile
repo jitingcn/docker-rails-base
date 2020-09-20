@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.10'
 gem 'oj'
 
 # High-level wrapper for processing images for the web with ImageMagick or libvips. (https://github.com/janko/image_processing)
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 
 # Boot large ruby/rails apps faster (https://github.com/Shopify/bootsnap)
 gem 'bootsnap', '>= 1.4.2', require: false
