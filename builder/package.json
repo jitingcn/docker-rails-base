@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "@rails/activestorage": "^6.0.3",
     "@rails/webpacker": "5.2.1",
     "core-js": "^3.6.5",
