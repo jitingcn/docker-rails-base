@@ -62,7 +62,7 @@ ONBUILD RUN mv config/credentials.yml.enc config/credentials.yml.enc.bak 2>/dev/
 ONBUILD RUN RAILS_ENV=production \
             SECRET_KEY_BASE=dummy \
             RAILS_MASTER_KEY=dummy \
-            bundle exec rails assets:precompile
+            bundle exec rails webpacker:compile
 ONBUILD RUN mv config/credentials.yml.enc.bak config/credentials.yml.enc 2>/dev/null || true
 
 # Remove folders not needed in resulting image
