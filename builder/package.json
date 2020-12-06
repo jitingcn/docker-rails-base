@@ -6,7 +6,7 @@
     "@fullhuman/postcss-purgecss": "^3.0.0",
     "@rails/activestorage": "^6.0.3",
     "@rails/webpacker": "5.2.1",
-    "core-js": "^3.8.0",
+    "core-js": "^3.8.1",
     "lodash": "^4.17.19",
     "stimulus": "^1.1.1",
     "tailwindcss": "^1.9.6",
