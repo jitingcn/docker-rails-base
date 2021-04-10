@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    action_policy (0.5.7)
+      ruby-next-core (>= 0.11.0)
     actioncable (6.1.3.1)
       actionpack (= 6.1.3.1)
       activesupport (= 6.1.3.1)
@@ -66,14 +68,21 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     attr_encrypted (3.1.0)
       encryptor (~> 3.0.0)
+    audit-log (1.1.0)
+      kaminari (>= 0.15)
+      rails (>= 5.2)
     bcrypt (3.1.16)
     bootsnap (1.7.3)
       msgpack (~> 1.0)
     builder (3.2.4)
     cancancan (3.2.1)
     concurrent-ruby (1.1.8)
+    config (3.1.0)
+      deep_merge (~> 1.2, >= 1.2.1)
+      dry-validation (~> 1.0, >= 1.0.0)
     connection_pool (2.2.3)
     crass (1.0.6)
+    deep_merge (1.2.1)
     devise (4.7.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -92,6 +101,40 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
+    dry-configurable (0.12.1)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 0.5, >= 0.5.0)
+    dry-container (0.7.2)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.1, >= 0.1.3)
+    dry-core (0.5.0)
+      concurrent-ruby (~> 1.0)
+    dry-equalizer (0.3.0)
+    dry-inflector (0.2.0)
+    dry-initializer (3.0.4)
+    dry-logic (1.1.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 0.5, >= 0.5)
+    dry-schema (1.6.1)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.8, >= 0.8.3)
+      dry-core (~> 0.5, >= 0.5)
+      dry-initializer (~> 3.0)
+      dry-logic (~> 1.0)
+      dry-types (~> 1.5)
+    dry-types (1.5.1)
+      concurrent-ruby (~> 1.0)
+      dry-container (~> 0.3)
+      dry-core (~> 0.5, >= 0.5)
+      dry-inflector (~> 0.1, >= 0.1.2)
+      dry-logic (~> 1.0, >= 1.0.2)
+    dry-validation (1.6.0)
+      concurrent-ruby (~> 1.0)
+      dry-container (~> 0.7, >= 0.7.1)
+      dry-core (~> 0.4)
+      dry-equalizer (~> 0.2)
+      dry-initializer (~> 3.0)
+      dry-schema (~> 1.5, >= 1.5.2)
     encryptor (3.0.0)
     erubi (1.10.0)
     ffi (1.14.2)
@@ -100,15 +143,10 @@ GEM
     geocoder (1.6.6)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    hamlit (2.13.0)
-      temple (>= 0.8.2)
-      thor
-      tilt
-    hamlit-rails (0.2.3)
-      actionpack (>= 4.0.1)
-      activesupport (>= 4.0.1)
-      hamlit (>= 1.2.0)
-      railties (>= 4.0.1)
+    hotwire-rails (0.1.3)
+      rails (>= 6.0.0)
+      stimulus-rails
+      turbo-rails
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -119,6 +157,18 @@ GEM
       ruby-vips (>= 2.0.17, < 3)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
+    kaminari (1.2.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.1)
+      kaminari-activerecord (= 1.2.1)
+      kaminari-core (= 1.2.1)
+    kaminari-actionview (1.2.1)
+      actionview
+      kaminari-core (= 1.2.1)
+    kaminari-activerecord (1.2.1)
+      activerecord
+      kaminari-core (= 1.2.1)
+    kaminari-core (1.2.1)
     lograge (0.11.2)
       actionpack (>= 4)
       activesupport (>= 4)
@@ -204,6 +254,7 @@ GEM
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
     rotp (2.1.2)
+    ruby-next-core (0.12.0)
     ruby-vips (2.0.17)
       ffi (~> 1.9)
     sassc (2.4.0)
@@ -226,22 +277,23 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stimulus-rails (0.2.3)
+      rails (>= 6.0.0)
     strip_attributes (1.11.0)
       activemodel (>= 3.0, < 7.0)
-    temple (0.8.2)
+    tailwindcss-rails (0.3.3)
+      rails (>= 6.0.0)
     thor (1.1.0)
     tilt (2.0.10)
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
-    turbolinks_render (0.9.20)
-      rails (>= 5.2.0)
-      turbolinks-source (~> 5.1)
+    turbo-rails (0.5.9)
+      rails (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7)
+    view_component (2.30.0)
+      activesupport (>= 5.0.0, < 7.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     webpacker (5.2.1)
@@ -258,15 +310,18 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  action_policy (~> 0.5.5)
   acts_as_list
+  audit-log (~> 1.1)
   bootsnap (>= 1.4.2)
   cancancan
+  config (~> 3.0)
   devise
   devise-two-factor
   dotenv-rails
   friendly_id
   geocoder
-  hamlit-rails
+  hotwire-rails
   image_processing (~> 1.12)
   jbuilder (~> 2.11)
   lograge
@@ -283,9 +338,9 @@ DEPENDENCIES
   sassc-rails (~> 2.1)
   sidekiq
   strip_attributes
-  turbolinks (~> 5)
-  turbolinks_render
-  webpacker (~> 5.2.1)
+  tailwindcss-rails (~> 0.3.3)
+  view_component
+  webpacker (~> 5.0)
 
 RUBY VERSION
    ruby 3.0.0p0

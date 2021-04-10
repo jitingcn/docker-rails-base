@@ -17,7 +17,7 @@ gem "dotenv-rails"
 gem "sassc-rails", "~> 2.1"
 
 # Use webpack to manage app-like JavaScript modules in Rails (https://github.com/rails/webpacker)
-gem "webpacker", "~> 5.2.1"
+gem "webpacker", "~> 5.0"
 
 # Create JSON structures via a Builder-style DSL (https://github.com/rails/jbuilder)
 gem 'jbuilder', '~> 2.11'
@@ -65,12 +65,12 @@ gem 'cancancan'
 gem 'acts_as_list'
 
 # Turbolinks makes navigating your web application faster (https://github.com/turbolinks/turbolinks)
-gem 'turbolinks', '~> 5'
+# gem 'turbolinks', '~> 5'
 
 # Use Rails render with Turbolinks (https://github.com/jorgemanrubia/turbolinks_render)
-gem 'turbolinks_render'
+# gem 'turbolinks_render'
 
-gem 'hamlit-rails'
+# gem 'hamlit-rails'
 
 # Simple HTTP and REST client for Ruby, inspired by microframework syntax for specifying actions. (https://github.com/rest-client/rest-client)
 gem 'rest-client'
@@ -95,3 +95,15 @@ gem 'redcarpet'
 
 # A comprehensive slugging and pretty-URL plugin. (https://github.com/norman/friendly_id)
 gem 'friendly_id'
+
+gem "hotwire-rails"
+
+gem "tailwindcss-rails", "~> 0.3.3"
+
+gem "view_component", require: "view_component/engine"
+
+gem "action_policy", "~> 0.5.5"
+
+gem "audit-log", "~> 1.1"
+
+gem "config", "~> 3.0"

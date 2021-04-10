@@ -1,4 +1,4 @@
-FROM jiting/ruby:3.0.0-slim-buster
+FROM jiting/ruby:3.0.1-slim-buster
 LABEL maintainer="jiting@jtcat.com"
 
 RUN gem install bundler
@@ -64,7 +64,7 @@ ONBUILD RUN bundle exec rails yarn:install \
             RAILS_ENV=production \
             SECRET_KEY_BASE=dummy \
             RAILS_MASTER_KEY=dummy \
-            bundle exec rails webpacker:compile
+            bundle exec rails assets:precompile 
 ONBUILD RUN mv config/credentials.yml.enc.bak config/credentials.yml.enc 2>/dev/null || true
 
 # Remove folders not needed in resulting image

@@ -1,4 +1,4 @@
-FROM jiting/ruby:3.0.0-slim-buster
+FROM jiting/ruby:3.0.1-slim-buster
 LABEL maintainer="jiting@jtcat.com"
 
 RUN set -eux; \
