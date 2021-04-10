@@ -9,6 +9,7 @@ RUN set -eux; \
   
 RUN set -eux; \
   apt-get update; \
+  curl -sL https://deb.nodesource.com/setup_14.x | sudo bash - ; \
   apt-get install -y \
     ca-certificates \
     build-essential \
