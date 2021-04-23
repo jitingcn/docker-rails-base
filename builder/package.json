@@ -11,7 +11,7 @@
     "lodash": "^4.17.21",
     "postcss": "^8.2.11",
     "stimulus": "^2.0.0",
-    "tailwindcss": "^2.1.0",
+    "tailwindcss": "^2.1.2",
     "turbolinks": "^5.2.0"
   }
 }
