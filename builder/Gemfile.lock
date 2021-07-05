@@ -292,8 +292,9 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7)
-    view_component (2.34.0)
-      activesupport (>= 5.0.0, < 7.0)
+    view_component (2.35.0)
+      activesupport (>= 5.0.0, < 8.0)
+      method_source (~> 1.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     webpacker (5.4.0)
