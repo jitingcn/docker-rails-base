@@ -12,7 +12,8 @@ RUN apk add --no-cache \
       file \
       imagemagick-dev \
       jpeg-dev \
-      libpng-dev
+      libpng-dev \
+      vips
 
 WORKDIR /home/app
 
