@@ -1198,17 +1198,17 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
 
-"@vue/reactivity@^3.0.2":
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/@vue/reactivity/-/reactivity-3.1.2.tgz#66fa530dd726d2fef285ae55d02106a727db463b"
-  integrity sha512-glJzJoN2xE7I2lRvwKM5u1BHRPTd1yc8iaf//Lai/78/uYAvE5DXp5HzWRFOwMlbRvMGJHIQjOqoxj87cDAaag==
+"@vue/reactivity@~3.1.1":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@vue/reactivity/-/reactivity-3.1.5.tgz#dbec4d9557f7c8f25c2635db1e23a78a729eb991"
+  integrity sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg==
   dependencies:
-    "@vue/shared" "3.1.2"
+    "@vue/shared" "3.1.5"
 
-"@vue/shared@3.1.2":
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.1.2.tgz#1069c0bc7d6f4bd15ccf3a5f3be29450aca368f9"
-  integrity sha512-EmH/poaDWBPJaPILXNI/1fvUbArJQmmTyVCwvvyDYDFnkPoTclAbHRAtyIvqfez7jybTDn077HTNILpxlsoWhg==
+"@vue/shared@3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.1.5.tgz#74ee3aad995d0a3996a6bb9533d4d280514ede03"
+  integrity sha512-oJ4F3TnvpXaQwZJNF3ZK+kLPHKarDmJjJ6jyzVNDKH9md1dptjC7lWR//jrGuLdek/U6iltWxqAnYOu8gCiOvA==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
@@ -1432,12 +1432,12 @@ alphanum-sort@^1.0.0:
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
 
-alpinejs@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.2.1.tgz#d620d1ca121ae2bf22242c2dd427c04d826e5e2b"
-  integrity sha512-MYYGUmVHNWN27TvgAtUCYXZlfsXoVCrLQT3a0Ak6CQKqf1TCHfQKxmhzJWscW5kPcLlOK2aYmWbV2H+XyfN2FQ==
+alpinejs@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.4.0.tgz#49ba59eea007bc7ce5da981466d9384e3eb17e65"
+  integrity sha512-ph9NBMpBcVc2vvSX8OpAu2Fg9mAPwIWZ+AwDZQ8t8iK3ZvT4toVzyuhelUQIT3iqYsh7yzVVT8BB7lWy55cqPw==
   dependencies:
-    "@vue/reactivity" "^3.0.2"
+    "@vue/reactivity" "~3.1.1"
 
 ansi-regex@^4.1.0:
   version "4.1.0"
