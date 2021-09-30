@@ -98,7 +98,7 @@ gem 'friendly_id'
 
 gem "hotwire-rails"
 
-gem "tailwindcss-rails", "~> 0.3.3"
+gem "tailwindcss-rails", "~> 0.5.0"
 
 gem "view_component", require: "view_component/engine"
 
