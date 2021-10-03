@@ -129,7 +129,7 @@ gem "active_storage_validations", "~> 0.9.5"
 
 gem "pundit", "~> 2.1"
 
-gem "action_policy", "~> 0.5.5"
+gem "action_policy", "~> 0.6.0"
 
 gem "audit-log", "~> 1.1"
 
