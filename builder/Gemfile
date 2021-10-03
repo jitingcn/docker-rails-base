@@ -12,15 +12,15 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Puma is a simple, fast, threaded, and highly concurrent HTTP 1.1 server for Ruby/Rack applications (http://puma.io)
 gem 'puma'
 
-gem "dotenv-rails"
-
 gem "sassc-rails", "~> 2.1"
-
-# Use webpack to manage app-like JavaScript modules in Rails (https://github.com/rails/webpacker)
-gem "webpacker", "~> 5.4"
 
 # Create JSON structures via a Builder-style DSL (https://github.com/rails/jbuilder)
 gem 'jbuilder', '~> 2.11'
+
+gem "redis", "~> 4.0", require: %w[redis redis/connection/hiredis]
+gem "hiredis"
+
+gem "bcrypt", "~> 3.1.7"
 
 # A fast JSON parser and serializer. (http://www.ohler.com/oj)
 gem 'oj'
@@ -43,11 +43,19 @@ gem 'pagy'
 # A modern, responsive admin framework for Ruby on Rails (https://www.trestle.io)
 # gem 'trestle'
 
+gem "vite_rails", "~> 3.0"
+
+gem "vite_plugin_legacy"
+
 # Flexible authentication solution for Rails with Warden (https://github.com/heartcombo/devise)
 gem 'devise'
 
+gem "responders", github: "heartcombo/responders"
+
 # Barebones two-factor authentication with Devise (https://github.com/tinfoil/devise-two-factor)
 gem 'devise-two-factor'
+
+gem "rexml", "~> 3.2"
 
 # Middleware for enabling Cross-Origin Resource Sharing in Rack apps (https://github.com/cyu/rack-cors)
 gem 'rack-cors', require: 'rack/cors'
@@ -75,8 +83,15 @@ gem 'acts_as_list'
 # Simple HTTP and REST client for Ruby, inspired by microframework syntax for specifying actions. (https://github.com/rest-client/rest-client)
 gem 'rest-client'
 
-# Simple, efficient background processing for Ruby (http://sidekiq.org)
-gem 'sidekiq'
+gem "stimulus_reflex", github: "stimulusreflex/stimulus_reflex", tag: "v3.5.0.pre2"
+
+gem "rexml", "~> 3.2"
+
+gem "rubyXL", "~> 3.4"
+
+gem "good_job", "~> 2.0"
+
+gem "cable_ready", github: "stimulusreflex/cable_ready", tag: "v5.0.0.pre2"
 
 # Complete geocoding solution for Ruby. (http://www.rubygeocoder.com)
 gem 'geocoder'
@@ -98,9 +113,21 @@ gem 'friendly_id'
 
 gem "hotwire-rails"
 
-gem "tailwindcss-rails", "~> 0.5.0"
+gem "tailwindcss-rails"
 
 gem "view_component", require: "view_component/engine"
+
+gem "excon", "~> 0.85.0"
+
+gem "madmin", github: "excid3/madmin"
+
+gem "paper_trail", "~> 12.1"
+
+gem "rails-settings-cached", "~> 2.8"
+
+gem "active_storage_validations", "~> 0.9.5"
+
+gem "pundit", "~> 2.1"
 
 gem "action_policy", "~> 0.5.5"
 

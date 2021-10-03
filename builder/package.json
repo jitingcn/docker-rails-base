@@ -3,15 +3,23 @@
   "private": true,
   "version": "0.1.0",
   "dependencies": {
-    "@rails/activestorage": "^6.1.4",
-    "@rails/webpacker": "5.4.0",
+    "@hotwired/stimulus": "^3.0.0",
+    "@hotwired/turbo-rails": "^7.0.0-rc.2",
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/typography": "^0.4.1",
     "alpinejs": "^3.2.1",
-    "autoprefixer": "^10.2.6",
+    "autoprefixer": "^10.3.3",
     "core-js": "^3.15.2",
     "lodash": "^4.17.21",
     "postcss": "^8.3.5",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-nested": "^5.0.6",
+    "postcss-preset-env": "^6.7.0",
     "stimulus": "^2.0.0",
-    "tailwindcss": "^2.2.4",
-    "turbolinks": "^5.2.0"
+    "tailwindcss": "^2.2.7",
+    "tailwindcss-stimulus-components": "^3.0.0",
+    "vite": "^2.5.0"
   }
 }

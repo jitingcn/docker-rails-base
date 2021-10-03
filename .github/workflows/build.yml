@@ -29,63 +29,97 @@ jobs:
     
     steps:
       - uses: actions/checkout@v2
-          
-      - name: Build and push slim builder image
-        if: github.ref == 'refs/heads/master'
-        uses: docker/build-push-action@v1
+      -
+        name: Login to DockerHub
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v1 
         with:
           username: jiting
           password: ${{ secrets.DOCKER_TOKEN }}
-          repository: jiting/rails-base
-          path: builder
-          dockerfile: builder/Dockerfile
-          tags: builder-3.0.2-slim-buster,builder-3.0-slim-buster,builder-3.0-slim,builder-slim
+      - name: Build and push slim builder image
+        if: github.ref == 'refs/heads/master'
+        uses: docker/build-push-action@v2
+        with:
+          context: builder
+          file: builder/Dockerfile
+          tags: |
+            jiting/rails-base:builder-3.0.2-slim-bullseye
+            jiting/rails-base:builder-3.0-slim-bullseye
+            jiting/rails-base:builder-3.0-slim
+            jiting/rails-base:builder-slim
 
   builder_alpine:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Build and push alpine builder image
-        if: github.ref == 'refs/heads/master'
-        uses: docker/build-push-action@v1
+      -
+        name: Login to DockerHub
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v1 
         with:
           username: jiting
           password: ${{ secrets.DOCKER_TOKEN }}
-          repository: jiting/rails-base
-          path: builder
-          dockerfile: builder/Dockerfile-alpine
-          tags: builder-3.0-alpine,builder-3.0.2-alpine,builder-3.0,builder-3.0.2,builder-alpine,builder-latest
+      - name: Build and push alpine builder image
+        if: github.ref == 'refs/heads/master'
+        uses: docker/build-push-action@v2
+        with:
+          context: builder
+          file: builder/Dockerfile-alpine
+          tags: |
+            jiting/rails-base:builder-3.0.2-alpine
+            jiting/rails-base:builder-3.0-alpine
+            jiting/rails-base:builder-3.0
+            jiting/rails-base:builder-alpine
+            jiting/rails-base:builder-latest
+
 
   production_slim:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-          
-      - name: Build and push slim production image
-        if: github.ref == 'refs/heads/master'
-        uses: docker/build-push-action@v1
+      -
+        name: Login to DockerHub
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v1 
         with:
           username: jiting
           password: ${{ secrets.DOCKER_TOKEN }}
-          repository: jiting/rails-base
-          dockerfile: production/Dockerfile
-          tags: production-3.0-slim-buster,production-3.0.2-slim-buster,production-3.0-slim,production-slim
+      - name: Build and push slim production image
+        if: github.ref == 'refs/heads/master'
+        uses: docker/build-push-action@v2
+        with:
+          context: production
+          file: production/Dockerfile
+          tags: |
+            jiting/rails-base:production-3.0-slim-bullseye
+            jiting/rails-base:production-3.0.2-slim-bullseye
+            jiting/rails-base:production-3.0-slim
+            jiting/rails-base:production-slim
+            jiting/rails-base:builder-latest
   
   production_alpine:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Build and push alpine production image
-        if: github.ref == 'refs/heads/master'
-        uses: docker/build-push-action@v1
+      -
+        name: Login to DockerHub
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v1 
         with:
           username: jiting
           password: ${{ secrets.DOCKER_TOKEN }}
-          repository: jiting/rails-base
-          dockerfile: production/Dockerfile-alpine
-          tags: production-3.0-alpine,production-3.0,production-3.0.2,production-alpine,production-latest
+      - name: Build and push alpine production image
+        if: github.ref == 'refs/heads/master'
+        uses: docker/build-push-action@v2
+        with:
+          context: production
+          file: production/Dockerfile-alpine
+          tags: |
+            jiting/rails-base:production-3.0-alpine
+            jiting/rails-base:production-3.0
+            jiting/rails-base:production-3.0.2
+            jiting/rails-base:production-alpine
+            jiting/rails-base:production-latest

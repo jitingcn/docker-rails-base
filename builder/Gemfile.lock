@@ -1,3 +1,40 @@
+GIT
+  remote: https://github.com/excid3/madmin.git
+  revision: 442650d07b99794ec4b39a20f52622cca29103d8
+  specs:
+    madmin (1.2.5)
+      pagy (>= 3.5, < 5.0)
+      rails (>= 6.0.3)
+
+GIT
+  remote: https://github.com/heartcombo/responders.git
+  revision: cf72db400492bf19a2169bd7b6de68e7036df30e
+  specs:
+    responders (3.0.1)
+      actionpack (>= 5.2)
+      railties (>= 5.2)
+
+GIT
+  remote: https://github.com/stimulusreflex/cable_ready.git
+  revision: 1b31202d29ccacb84f9fe3bc6c2a374011ae37a0
+  tag: v5.0.0.pre2
+  specs:
+    cable_ready (5.0.0.pre2)
+      rails (>= 5.2)
+      thread-local (>= 1.1.0)
+
+GIT
+  remote: https://github.com/stimulusreflex/stimulus_reflex.git
+  revision: cdcd9313a7388c0bb0928bdd23ec07d586b740be
+  tag: v3.5.0.pre2
+  specs:
+    stimulus_reflex (3.5.0.pre2)
+      cable_ready (= 5.0.0.pre2)
+      nokogiri
+      rack
+      rails (>= 5.2)
+      redis
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -41,6 +78,8 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_storage_validations (0.9.5)
+      rails (>= 5.2.0)
     activejob (6.1.4)
       activesupport (= 6.1.4)
       globalid (>= 0.3.6)
@@ -80,7 +119,6 @@ GEM
     config (3.1.0)
       deep_merge (~> 1.2, >= 1.2.1)
       dry-validation (~> 1.0, >= 1.0.0)
-    connection_pool (2.2.3)
     crass (1.0.6)
     deep_merge (1.2.1)
     devise (4.8.0)
@@ -97,10 +135,7 @@ GEM
       rotp (~> 6.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    dotenv (2.7.6)
-    dotenv-rails (2.7.6)
-      dotenv (= 2.7.6)
-      railties (>= 3.2)
+    dry-cli (0.7.0)
     dry-configurable (0.12.1)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.5, >= 0.5.0)
@@ -137,12 +172,27 @@ GEM
       dry-schema (~> 1.5, >= 1.5.2)
     encryptor (3.0.0)
     erubi (1.10.0)
+    et-orbi (1.2.5)
+      tzinfo
+    excon (0.85.0)
     ffi (1.14.2)
     friendly_id (5.4.2)
       activerecord (>= 4.0.0)
+    fugit (1.5.2)
+      et-orbi (~> 1.1, >= 1.1.8)
+      raabro (~> 1.4)
     geocoder (1.6.7)
     globalid (0.5.2)
       activesupport (>= 5.0)
+    good_job (2.4.0)
+      activejob (>= 5.2.0)
+      activerecord (>= 5.2.0)
+      concurrent-ruby (>= 1.0.2)
+      fugit (>= 1.1)
+      railties (>= 5.2.0)
+      thor (>= 0.14.1)
+      zeitwerk (>= 2.0)
+    hiredis (0.6.3)
     hotwire-rails (0.1.3)
       rails (>= 6.0.0)
       stimulus-rails
@@ -197,10 +247,16 @@ GEM
     oj (3.12.0)
     orm_adapter (0.5.0)
     pagy (4.10.1)
+    paper_trail (12.1.0)
+      activerecord (>= 5.2)
+      request_store (~> 1.1)
     pg (1.2.3)
     public_suffix (4.0.6)
     puma (5.3.2)
       nio4r (~> 2.0)
+    pundit (2.1.1)
+      activesupport (>= 3.0.0)
+    raabro (1.4.0)
     racc (1.5.2)
     rack (2.2.3)
     rack-attack (6.5.0)
@@ -210,7 +266,7 @@ GEM
       rack (>= 1.0.0, < 3)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
-    rack-proxy (0.6.5)
+    rack-proxy (0.7.0)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -234,6 +290,8 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.2)
       loofah (~> 2.3)
+    rails-settings-cached (2.8.1)
+      rails (>= 5.0.0)
     railties (6.1.4)
       actionpack (= 6.1.4)
       activesupport (= 6.1.4)
@@ -245,18 +303,20 @@ GEM
     redis (4.2.5)
     request_store (1.5.0)
       rack (>= 1.4)
-    responders (3.0.1)
-      actionpack (>= 5.0)
-      railties (>= 5.0)
     rest-client (2.1.0)
       http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    rexml (3.2.5)
     rotp (6.2.0)
     ruby-next-core (0.12.0)
     ruby-vips (2.0.17)
       ffi (~> 1.9)
+    rubyXL (3.4.18)
+      nokogiri (>= 1.10.8)
+      rubyzip (>= 1.3.0)
+    rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -265,11 +325,6 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    semantic_range (3.0.0)
-    sidekiq (6.2.1)
-      connection_pool (>= 2.2.2)
-      rack (~> 2.0)
-      redis (>= 4.2.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -284,6 +339,7 @@ GEM
     tailwindcss-rails (0.5.0)
       rails (>= 6.0.0)
     thor (1.1.0)
+    thread-local (1.1.0)
     tilt (2.0.10)
     turbo-rails (0.5.9)
       rails (>= 6.0.0)
@@ -295,13 +351,17 @@ GEM
     view_component (2.35.0)
       activesupport (>= 5.0.0, < 8.0)
       method_source (~> 1.0)
+    vite_plugin_legacy (3.0.0)
+      vite_ruby (~> 3.0)
+    vite_rails (3.0.0)
+      railties (>= 5.1, < 8)
+      vite_ruby (~> 3.0)
+    vite_ruby (3.0.0)
+      dry-cli (~> 0.7.0)
+      rack-proxy (~> 0.6, >= 0.6.1)
+      zeitwerk (~> 2.2)
     warden (1.2.9)
       rack (>= 2.0.9)
-    webpacker (5.4.0)
-      activesupport (>= 5.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 5.2)
-      semantic_range (>= 2.3.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -312,39 +372,53 @@ PLATFORMS
 
 DEPENDENCIES
   action_policy (~> 0.5.5)
+  active_storage_validations (~> 0.9.5)
   acts_as_list
   audit-log (~> 1.1)
+  bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
+  cable_ready!
   cancancan
   config (~> 3.0)
   devise
   devise-two-factor
-  dotenv-rails
+  excon (~> 0.85.0)
   friendly_id
   geocoder
+  good_job (~> 2.0)
+  hiredis
   hotwire-rails
   image_processing (~> 1.12)
   jbuilder (~> 2.11)
   lograge
+  madmin!
   oj
   pagy
+  paper_trail (~> 12.1)
   pg (>= 0.18, < 2.0)
   puma
+  pundit (~> 2.1)
   rack-attack
   rack-canonical-host
   rack-cors
   rails (~> 6.1)
+  rails-settings-cached (~> 2.8)
   redcarpet
+  redis (~> 4.0)
+  responders!
   rest-client
+  rexml (~> 3.2)
+  rubyXL (~> 3.4)
   sassc-rails (~> 2.1)
-  sidekiq
+  stimulus_reflex!
   strip_attributes
-  tailwindcss-rails (~> 0.5.0)
+  tailwindcss-rails
   view_component
-  webpacker (~> 5.4)
+  vite_plugin_legacy
+  vite_rails (~> 3.0)
 
 RUBY VERSION
    ruby 3.0.0p0
 
 BUNDLED WITH
-   2.2.3
+   2.2.26

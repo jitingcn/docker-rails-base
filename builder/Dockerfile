@@ -1,4 +1,4 @@
-FROM jiting/ruby:3.0.2-slim-buster
+FROM jiting/ruby:3.0.2-slim-bullseye
 LABEL maintainer="jiting@jtcat.com"
 
 RUN gem install bundler
