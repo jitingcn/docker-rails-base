@@ -42,6 +42,7 @@ jobs:
         with:
           context: builder
           pull: true
+          push: true
           file: builder/Dockerfile
           tags: |
             jiting/rails-base:builder-3.0.2-slim-bullseye
@@ -67,10 +68,12 @@ jobs:
         with:
           context: builder
           pull: true
+          push: true
           file: builder/Dockerfile-alpine
           tags: |
             jiting/rails-base:builder-3.0.2-alpine
             jiting/rails-base:builder-3.0-alpine
+            jiting/rails-base:builder-3.0.2
             jiting/rails-base:builder-3.0
             jiting/rails-base:builder-alpine
             jiting/rails-base:builder-latest
@@ -94,13 +97,13 @@ jobs:
         with:
           context: production
           pull: true
+          push: true
           file: production/Dockerfile
           tags: |
             jiting/rails-base:production-3.0-slim-bullseye
             jiting/rails-base:production-3.0.2-slim-bullseye
             jiting/rails-base:production-3.0-slim
             jiting/rails-base:production-slim
-            jiting/rails-base:builder-latest
   
   production_alpine:
     runs-on: ubuntu-latest
@@ -120,6 +123,7 @@ jobs:
         with:
           context: production
           pull: true
+          push: true
           file: production/Dockerfile-alpine
           tags: |
             jiting/rails-base:production-3.0-alpine
