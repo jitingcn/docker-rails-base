@@ -55,8 +55,6 @@ gem "responders", github: "heartcombo/responders"
 # Barebones two-factor authentication with Devise (https://github.com/tinfoil/devise-two-factor)
 gem 'devise-two-factor'
 
-gem "rexml", "~> 3.2"
-
 # Middleware for enabling Cross-Origin Resource Sharing in Rack apps (https://github.com/cyu/rack-cors)
 gem 'rack-cors', require: 'rack/cors'
 
@@ -128,8 +126,6 @@ gem "rails-settings-cached", "~> 2.8"
 gem "active_storage_validations", "~> 0.9.5"
 
 gem "pundit", "~> 2.1"
-
-gem "action_policy", "~> 0.5.5"
 
 gem "audit-log", "~> 1.1"
 
