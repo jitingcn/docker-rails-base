@@ -331,7 +331,7 @@ GEM
       rails (>= 6.0.0)
     strip_attributes (1.11.0)
       activemodel (>= 3.0, < 7.0)
-    tailwindcss-rails (0.5.0)
+    tailwindcss-rails (0.5.1)
       rails (>= 6.0.0)
     thor (1.1.0)
     thread-local (1.1.0)
