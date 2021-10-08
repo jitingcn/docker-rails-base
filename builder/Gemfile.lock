@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/excid3/madmin.git
-  revision: 372fe48c00db38c68cd57d29be5e603524ab7266
+  revision: 8348cbffdb2253fae0e23a7b7047909f9285d5f3
   specs:
     madmin (1.2.5)
       pagy (>= 3.5, < 5.0)
