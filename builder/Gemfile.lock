@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/excid3/madmin.git
-  revision: 372fe48c00db38c68cd57d29be5e603524ab7266
+  revision: 7778b1a90afdcc71ec9c984ee0cd2aeb8dc56d22
   specs:
     madmin (1.2.5)
       pagy (>= 3.5, < 5.0)
@@ -231,7 +231,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2021.0901)
     mini_magick (4.11.0)
-    mini_mime (1.1.1)
+    mini_mime (1.1.2)
     mini_portile2 (2.6.1)
     minitest (5.14.4)
     msgpack (1.4.2)
