@@ -296,7 +296,7 @@ GEM
       thor (~> 1.0)
     rake (13.0.6)
     redcarpet (3.5.1)
-    redis (4.4.0)
+    redis (4.5.1)
     request_store (1.5.0)
       rack (>= 1.4)
     rest-client (2.1.0)
@@ -398,7 +398,7 @@ DEPENDENCIES
   rails (~> 6.1)
   rails-settings-cached (~> 2.8)
   redcarpet
-  redis (~> 4.0)
+  redis (~> 4.5)
   responders!
   rest-client
   rexml (~> 3.2)
