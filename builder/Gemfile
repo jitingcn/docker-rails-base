@@ -87,7 +87,7 @@ gem "rexml", "~> 3.2"
 
 gem "rubyXL", "~> 3.4"
 
-gem "good_job", "~> 2.0"
+gem "good_job", "~> 2.4"
 
 gem "cable_ready", github: "stimulusreflex/cable_ready", tag: "v5.0.0.pre2"
 
