@@ -16,7 +16,7 @@
     "postcss": "^8.3.5",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-nested": "^5.0.6",
-    "postcss-preset-env": "^6.7.0",
+    "postcss-preset-env": "^7.0.0",
     "stimulus": "^2.0.0",
     "tailwindcss": "^2.2.7",
     "tailwindcss-stimulus-components": "^3.0.0",
