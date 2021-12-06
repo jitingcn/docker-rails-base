@@ -196,7 +196,7 @@ GEM
     http-accept (1.7.0)
     http-cookie (1.0.4)
       domain_name (~> 0.5)
-    i18n (1.8.10)
+    i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.1)
       mini_magick (>= 4.9.5, < 5)
@@ -343,7 +343,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8)
-    view_component (2.40.0)
+    view_component (2.46.0)
       activesupport (>= 5.0.0, < 8.0)
       method_source (~> 1.0)
     vite_plugin_legacy (3.0.0)
@@ -360,7 +360,7 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    zeitwerk (2.4.2)
+    zeitwerk (2.5.1)
 
 PLATFORMS
   ruby
