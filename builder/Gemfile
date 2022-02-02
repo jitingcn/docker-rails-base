@@ -17,7 +17,7 @@ gem "sassc-rails", "~> 2.1"
 # Create JSON structures via a Builder-style DSL (https://github.com/rails/jbuilder)
 gem 'jbuilder', '~> 2.11'
 
-gem "redis", "~> 4.0", require: %w[redis redis/connection/hiredis]
+gem "redis", "~> 4.6", require: %w[redis redis/connection/hiredis]
 gem "hiredis"
 
 gem "bcrypt", "~> 3.1.7"
