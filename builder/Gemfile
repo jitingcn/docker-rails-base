@@ -115,7 +115,7 @@ gem "tailwindcss-rails"
 
 gem "view_component", require: "view_component/engine"
 
-gem "excon", "~> 0.86.0"
+gem "excon", "~> 0.91.0"
 
 gem "madmin", github: "excid3/madmin"
 
