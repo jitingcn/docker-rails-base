@@ -7,7 +7,7 @@
     "@hotwired/turbo-rails": "^7.1.1",
     "@rails/actioncable": "^7.0.1",
     "@rails/activestorage": "^7.0.1",
-    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/typography": "^0.5.1",
     "alpinejs": "^3.8.1",
     "autoprefixer": "^10.4.2",
@@ -20,6 +20,6 @@
     "stimulus": "^3.0.1",
     "tailwindcss": "^3.0.19",
     "tailwindcss-stimulus-components": "^3.0.3",
-    "vite": "^2.7.13"
+    "vite": "^3.0.9"
   }
 }
