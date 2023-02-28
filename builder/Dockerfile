@@ -1,4 +1,4 @@
-FROM jiting/ruby:3.1.2-slim-bullseye
+FROM jiting/ruby:3.2.0-slim-bullseye
 LABEL maintainer="jiting@jtcat.com"
 
 RUN gem install bundler
@@ -6,8 +6,8 @@ RUN set -eux; \
   apt update && apt install -y curl gnupg && \
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list; \
-  curl -sL https://deb.nodesource.com/setup_14.x | bash - 
-  
+  curl -sL https://deb.nodesource.com/setup_18.x | bash -
+
 RUN set -eux; \
   apt-get update; \
   apt-get install -y \
@@ -65,7 +65,7 @@ ONBUILD RUN bundle exec rails yarn:install \
             RAILS_ENV=production \
             SECRET_KEY_BASE=dummy \
             RAILS_MASTER_KEY=dummy \
-            bundle exec rails assets:precompile 
+            bundle exec rails assets:precompile
 ONBUILD RUN mv config/credentials.yml.enc.bak config/credentials.yml.enc 2>/dev/null || true
 
 # Remove folders not needed in resulting image

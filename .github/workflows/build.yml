@@ -13,26 +13,26 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        
+
       - name: test build builder image
         if: github.ref != 'refs/heads/master'
         working-directory: ./builder
         run: docker build --pull --compress -f Dockerfile-alpine .
-        
+
       - name: test build production image
         if: github.ref != 'refs/heads/master'
         working-directory: ./production
         run: docker build --pull --compress -f Dockerfile-alpine .
-        
+
   builder_slim:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v2
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
-        uses: docker/login-action@v1 
+        uses: docker/login-action@v1
         with:
           username: jiting
           password: ${{ secrets.DOCKER_TOKEN }}
@@ -45,9 +45,9 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           file: builder/Dockerfile
           tags: |
-            jiting/rails-base:builder-3.1.2-slim-bullseye
-            jiting/rails-base:builder-3.1-slim-bullseye
-            jiting/rails-base:builder-3.1-slim
+            jiting/rails-base:builder-3.2.0-slim-bullseye
+            jiting/rails-base:builder-3.2-slim-bullseye
+            jiting/rails-base:builder-3.2-slim
             jiting/rails-base:builder-slim
 
   builder_alpine:
@@ -58,7 +58,7 @@ jobs:
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
-        uses: docker/login-action@v1 
+        uses: docker/login-action@v1
         with:
           username: jiting
           password: ${{ secrets.DOCKER_TOKEN }}
@@ -71,10 +71,10 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           file: builder/Dockerfile-alpine
           tags: |
-            jiting/rails-base:builder-3.1.2-alpine
-            jiting/rails-base:builder-3.1-alpine
-            jiting/rails-base:builder-3.1.2
-            jiting/rails-base:builder-3.1
+            jiting/rails-base:builder-3.2.0-alpine
+            jiting/rails-base:builder-3.2-alpine
+            jiting/rails-base:builder-3.2.0
+            jiting/rails-base:builder-3.2
             jiting/rails-base:builder-alpine
             jiting/rails-base:builder-latest
 
@@ -87,7 +87,7 @@ jobs:
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
-        uses: docker/login-action@v1 
+        uses: docker/login-action@v1
         with:
           username: jiting
           password: ${{ secrets.DOCKER_TOKEN }}
@@ -100,11 +100,11 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           file: production/Dockerfile
           tags: |
-            jiting/rails-base:production-3.1-slim-bullseye
-            jiting/rails-base:production-3.1.2-slim-bullseye
-            jiting/rails-base:production-3.1-slim
+            jiting/rails-base:production-3.2-slim-bullseye
+            jiting/rails-base:production-3.2.0-slim-bullseye
+            jiting/rails-base:production-3.2-slim
             jiting/rails-base:production-slim
-  
+
   production_alpine:
     runs-on: ubuntu-latest
 
@@ -113,7 +113,7 @@ jobs:
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
-        uses: docker/login-action@v1 
+        uses: docker/login-action@v1
         with:
           username: jiting
           password: ${{ secrets.DOCKER_TOKEN }}
@@ -126,9 +126,9 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           file: production/Dockerfile-alpine
           tags: |
-            jiting/rails-base:production-3.1.2-alpine
-            jiting/rails-base:production-3.1-alpine
-            jiting/rails-base:production-3.1
-            jiting/rails-base:production-3.1.2
+            jiting/rails-base:production-3.2.0-alpine
+            jiting/rails-base:production-3.2-alpine
+            jiting/rails-base:production-3.2
+            jiting/rails-base:production-3.2.0
             jiting/rails-base:production-alpine
             jiting/rails-base:production-latest

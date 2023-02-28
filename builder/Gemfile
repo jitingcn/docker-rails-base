@@ -17,7 +17,7 @@ gem "sassc-rails", "~> 2.1"
 # Create JSON structures via a Builder-style DSL (https://github.com/rails/jbuilder)
 gem 'jbuilder', '~> 2.11'
 
-gem "redis", "~> 4.0", require: %w[redis redis/connection/hiredis]
+gem "redis", "~> 5.0", require: %w[redis redis/connection/hiredis]
 gem "hiredis"
 
 gem "bcrypt", "~> 3.1.7"
@@ -75,15 +75,15 @@ gem 'acts_as_list'
 # Simple HTTP and REST client for Ruby, inspired by microframework syntax for specifying actions. (https://github.com/rest-client/rest-client)
 gem 'rest-client'
 
-gem "stimulus_reflex", github: "stimulusreflex/stimulus_reflex", tag: "v3.5.0.pre2"
+gem "stimulus_reflex", github: "stimulusreflex/stimulus_reflex", tag: "v3.5.0.pre10"
 
 gem "rexml", "~> 3.2"
 
 gem "rubyXL", "~> 3.4"
 
-gem "good_job", "~> 2.0"
+gem "good_job", "~> 3.0"
 
-gem "cable_ready", github: "stimulusreflex/cable_ready", tag: "v5.0.0.pre2"
+gem "cable_ready", github: "stimulusreflex/cable_ready", tag: "v5.0.0.pre10"
 
 # Complete geocoding solution for Ruby. (http://www.rubygeocoder.com)
 gem 'geocoder'
@@ -109,18 +109,18 @@ gem "tailwindcss-rails"
 
 gem "view_component", require: "view_component/engine"
 
-gem "excon", "~> 0.86.0"
+gem "excon", "~> 0.99.0"
 
 gem "madmin", github: "jitingcn/madmin", branch: "dev"
 
-gem "paper_trail", "~> 12.1"
+gem "paper_trail", "~> 14.0"
 
 gem "rails-settings-cached", "~> 2.8"
 
-gem "active_storage_validations", "~> 0.9"
+gem "active_storage_validations", "~> 1.0"
 
 gem "pundit", "~> 2.1"
 
 gem "audit-log", "~> 1.1"
 
-gem "config", "~> 3.0"
+gem "config", "~> 4.0"
