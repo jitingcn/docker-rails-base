@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: test build builder image
         if: github.ref != 'refs/heads/master'
@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
@@ -45,7 +45,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           file: builder/Dockerfile
           tags: |
-            jiting/rails-base:builder-3.2.0-slim-bullseye
+            jiting/rails-base:builder-3.2.1-slim-bullseye
             jiting/rails-base:builder-3.2-slim-bullseye
             jiting/rails-base:builder-3.2-slim
             jiting/rails-base:builder-slim
@@ -54,7 +54,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
@@ -71,9 +71,9 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           file: builder/Dockerfile-alpine
           tags: |
-            jiting/rails-base:builder-3.2.0-alpine
+            jiting/rails-base:builder-3.2.1-alpine
             jiting/rails-base:builder-3.2-alpine
-            jiting/rails-base:builder-3.2.0
+            jiting/rails-base:builder-3.2.1
             jiting/rails-base:builder-3.2
             jiting/rails-base:builder-alpine
             jiting/rails-base:builder-latest
@@ -83,7 +83,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
@@ -101,7 +101,7 @@ jobs:
           file: production/Dockerfile
           tags: |
             jiting/rails-base:production-3.2-slim-bullseye
-            jiting/rails-base:production-3.2.0-slim-bullseye
+            jiting/rails-base:production-3.2.1-slim-bullseye
             jiting/rails-base:production-3.2-slim
             jiting/rails-base:production-slim
 
@@ -109,7 +109,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
@@ -126,9 +126,9 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           file: production/Dockerfile-alpine
           tags: |
-            jiting/rails-base:production-3.2.0-alpine
+            jiting/rails-base:production-3.2.1-alpine
             jiting/rails-base:production-3.2-alpine
             jiting/rails-base:production-3.2
-            jiting/rails-base:production-3.2.0
+            jiting/rails-base:production-3.2.1
             jiting/rails-base:production-alpine
             jiting/rails-base:production-latest
