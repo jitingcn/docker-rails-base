@@ -1,4 +1,4 @@
-FROM jiting/ruby:3.2.1-alpine
+FROM jiting/ruby:3.2.2-alpine
 LABEL maintainer="jiting <jiting@jtcat.com>"
 
 # Add basic packages

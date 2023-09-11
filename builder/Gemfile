@@ -1,21 +1,21 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '~> 3'
+ruby "~> 3"
 
 # Full-stack web application framework. (https://rubyonrails.org)
-gem 'rails', '~> 7'
+gem "rails", "~> 7"
 
 # Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org/] (https://github.com/ged/ruby-pg)
-gem 'pg', '>= 0.18', '< 2.0'
+gem "pg", ">= 0.18", "< 2.0"
 
 # Puma is a simple, fast, threaded, and highly concurrent HTTP 1.1 server for Ruby/Rack applications (http://puma.io)
-gem 'puma'
+gem "puma"
 
 gem "sassc-rails", "~> 2.1"
 
 # Create JSON structures via a Builder-style DSL (https://github.com/rails/jbuilder)
-gem 'jbuilder', '~> 2.11'
+gem "jbuilder", "~> 2.11"
 
 gem "redis", "~> 5.0", require: %w[redis redis/connection/hiredis]
 gem "hiredis"
@@ -23,22 +23,22 @@ gem "hiredis"
 gem "bcrypt", "~> 3.1.7"
 
 # A fast JSON parser and serializer. (http://www.ohler.com/oj)
-gem 'oj'
+gem "oj"
 
 # High-level wrapper for processing images for the web with ImageMagick or libvips. (https://github.com/janko/image_processing)
-gem 'image_processing', '~> 1.12'
+gem "image_processing", "~> 1.12"
 
 # Boot large ruby/rails apps faster (https://github.com/Shopify/bootsnap)
-gem 'bootsnap', '>= 1.4.2', require: false
+gem "bootsnap", ">= 1.4.2", require: false
 
 # Tame Rails' multi-line logging into a single line per request (https://github.com/roidrage/lograge)
-gem 'lograge'
+gem "lograge"
 
 # Whitespace cleanup for ActiveModel attributes (https://github.com/rmm5t/strip_attributes)
-gem 'strip_attributes'
+gem "strip_attributes"
 
 # The Ultimate Pagination Ruby Gem (https://github.com/ddnexus/pagy)
-gem 'pagy'
+gem "pagy"
 
 # A modern, responsive admin framework for Ruby on Rails (https://www.trestle.io)
 # gem 'trestle'
@@ -48,34 +48,34 @@ gem "vite_rails", "~> 3.0"
 gem "vite_plugin_legacy"
 
 # Flexible authentication solution for Rails with Warden (https://github.com/heartcombo/devise)
-gem 'devise'
+gem "devise"
 
-gem "responders", github: "heartcombo/responders"
+gem "responders"
 
 # Barebones two-factor authentication with Devise (https://github.com/tinfoil/devise-two-factor)
 # gem 'devise-two-factor'
 
 # Middleware for enabling Cross-Origin Resource Sharing in Rack apps (https://github.com/cyu/rack-cors)
-gem 'rack-cors', require: 'rack/cors'
+gem "rack-cors", require: "rack/cors"
 
 # Block & throttle abusive requests (https://github.com/kickstarter/rack-attack)
-gem 'rack-attack'
+gem "rack-attack"
 
 # Rack middleware for defining a canonical host name. (http://github.com/tylerhunt/rack-canonical-host)
-gem 'rack-canonical-host'
+gem "rack-canonical-host"
 
 # Simple authorization solution for Rails. (https://github.com/CanCanCommunity/cancancan)
-gem 'cancancan'
+gem "cancancan"
 
 # A gem adding sorting, reordering capabilities to an active_record model, allowing it to act as a list (http://github.com/brendon/acts_as_list)
-gem 'acts_as_list'
+gem "acts_as_list"
 
 # gem 'hamlit-rails'
 
 # Simple HTTP and REST client for Ruby, inspired by microframework syntax for specifying actions. (https://github.com/rest-client/rest-client)
-gem 'rest-client'
+gem "rest-client"
 
-gem "stimulus_reflex", github: "stimulusreflex/stimulus_reflex", tag: "v3.5.0.pre10"
+gem "stimulus_reflex", "3.5.0.rc3"
 
 gem "rexml", "~> 3.2"
 
@@ -83,10 +83,10 @@ gem "rubyXL", "~> 3.4"
 
 gem "good_job", "~> 3.0"
 
-gem "cable_ready", github: "stimulusreflex/cable_ready", tag: "v5.0.0.pre10"
+gem "cable_ready"
 
 # Complete geocoding solution for Ruby. (http://www.rubygeocoder.com)
-gem 'geocoder'
+gem "geocoder"
 
 # Collection of SEO helpers for Ruby on Rails. (http://github.com/kpumuk/meta-tags)
 # gem 'meta-tags'
@@ -98,10 +98,10 @@ gem 'geocoder'
 # gem 'inertia_rails'
 
 # Markdown that smells nice (http://github.com/vmg/redcarpet)
-gem 'redcarpet'
+gem "redcarpet"
 
 # A comprehensive slugging and pretty-URL plugin. (https://github.com/norman/friendly_id)
-gem 'friendly_id'
+gem "friendly_id"
 
 gem "hotwire-rails"
 
@@ -109,11 +109,11 @@ gem "tailwindcss-rails"
 
 gem "view_component", require: "view_component/engine"
 
-gem "excon", "~> 0.99.0"
+gem "excon", "~> 0.102.0"
 
 gem "madmin", github: "jitingcn/madmin", branch: "dev"
 
-gem "paper_trail", "~> 14.0"
+gem "paper_trail", "~> 15.0"
 
 gem "rails-settings-cached", "~> 2.8"
 
