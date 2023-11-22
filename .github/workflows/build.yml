@@ -45,9 +45,9 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           file: builder/Dockerfile
           tags: |
-            jiting/rails-base:builder-3.2.2-slim-bookworm
-            jiting/rails-base:builder-3.2-slim-bookworm
-            jiting/rails-base:builder-3.2-slim
+            jiting/rails-base:builder-3.3.0-rc-slim-bookworm
+            jiting/rails-base:builder-3.3-rc-slim-bookworm
+            jiting/rails-base:builder-3.3-rc-slim
             jiting/rails-base:builder-slim
 
   builder_alpine:
@@ -71,12 +71,12 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           file: builder/Dockerfile-alpine
           tags: |
-            jiting/rails-base:builder-3.2.2-alpine
-            jiting/rails-base:builder-3.2-alpine
-            jiting/rails-base:builder-3.2.2
-            jiting/rails-base:builder-3.2
+            jiting/rails-base:builder-3.3.0-rc-alpine
+            jiting/rails-base:builder-3.3-rc-alpine
+            jiting/rails-base:builder-3.3.0-rc
+            jiting/rails-base:builder-3.3-rc
             jiting/rails-base:builder-alpine
-            jiting/rails-base:builder-latest
+          # jiting/rails-base:builder-latest
 
 
   production_slim:
@@ -100,9 +100,9 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           file: production/Dockerfile
           tags: |
-            jiting/rails-base:production-3.2-slim-bookworm
-            jiting/rails-base:production-3.2.2-slim-bookworm
-            jiting/rails-base:production-3.2-slim
+            jiting/rails-base:production-3.3.0-rc-slim-bookworm
+            jiting/rails-base:production-3.3.0-rc-slim-bookworm
+            jiting/rails-base:production-3.3-rc-slim
             jiting/rails-base:production-slim
 
   production_alpine:
@@ -126,9 +126,9 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           file: production/Dockerfile-alpine
           tags: |
-            jiting/rails-base:production-3.2.2-alpine
-            jiting/rails-base:production-3.2-alpine
-            jiting/rails-base:production-3.2
-            jiting/rails-base:production-3.2.2
+            jiting/rails-base:production-3.3.0-rc-alpine
+            jiting/rails-base:production-3.3-rc-alpine
+            jiting/rails-base:production-3.3-rc
+            jiting/rails-base:production-3.3.0-rc
             jiting/rails-base:production-alpine
-            jiting/rails-base:production-latest
+          # jiting/rails-base:production-latest

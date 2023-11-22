@@ -1,4 +1,4 @@
-FROM jiting/ruby:3.2.2-slim-bookworm
+FROM ruby:3.3-rc-slim
 LABEL maintainer="jiting@jtcat.com"
 
 RUN set -eux; \
@@ -21,6 +21,9 @@ EXPOSE 3000
 
 # This image is for production env only
 ENV RAILS_ENV production
+
+# Set MALLOC_ARENA_MAX to prevent memory fragmentation
+ENV MALLOC_ARENA_MAX 2
 
 # Write GIT commit SHA and TIME to env vars
 ONBUILD ARG COMMIT_SHA
