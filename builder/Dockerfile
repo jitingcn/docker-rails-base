@@ -1,4 +1,4 @@
-FROM ruby:3.3-rc-slim
+FROM ruby:3.4.3-slim
 LABEL maintainer="jiting@jtcat.com"
 
 RUN gem install bundler
@@ -21,7 +21,11 @@ RUN set -eux; \
     tzdata \
     imagemagick \
     libmagickwand-dev \
+    libjemalloc2 \
+    patchelf \
   ; \
+  patchelf --add-needed libjemalloc.so.2 /usr/local/bin/ruby; \
+  apt-get purge -y patchelf; \
 	rm -rf /var/lib/apt/lists/*
 
 WORKDIR /home/app

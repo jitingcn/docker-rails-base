@@ -1,19 +1,24 @@
-FROM ruby:3.3-rc-alpine
+FROM ruby:3.4.3-alpine
 LABEL maintainer="jiting <jiting@jtcat.com>"
 
 # Add basic packages
 RUN apk add --no-cache \
-      build-base \
-      postgresql-dev \
-      git \
-      nodejs \
-      yarn \
-      tzdata \
-      file \
-      imagemagick-dev \
-      jpeg-dev \
-      libpng-dev \
-      vips
+    build-base \
+    postgresql-dev \
+    git \
+    nodejs \
+    yarn \
+    tzdata \
+    file \
+    imagemagick-dev \
+    jpeg-dev \
+    libpng-dev \
+    vips \
+    jemalloc \
+    patchelf \
+   ; \
+  patchelf --add-needed libjemalloc.so.2 /usr/local/bin/ruby; \
+  apk del patchelf
 
 WORKDIR /home/app
 

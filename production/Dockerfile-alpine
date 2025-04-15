@@ -1,11 +1,17 @@
-FROM ruby:3.3-rc-alpine
+FROM ruby:3.4.3-alpine
 LABEL maintainer="jiting <jiting@jtcat.com>"
 
 # Add basic packages
 RUN apk add --no-cache \
-      postgresql-client \
-      tzdata \
-      file
+    postgresql-client \
+    tzdata \
+    file \
+    jemalloc \
+    patchelf \
+  ; \
+  patchelf --add-needed libjemalloc.so.2 /usr/local/bin/ruby; \
+  apk del patchelf
+
 
 # Configure Rails
 ENV RAILS_LOG_TO_STDOUT true
@@ -19,8 +25,7 @@ EXPOSE 3000
 # This image is for production env only
 ENV RAILS_ENV production
 
-# Set MALLOC_ARENA_MAX to prevent memory fragmentation
-ENV MALLOC_ARENA_MAX 2
+ENV MALLOC_CONF dirty_decay_ms:1000,narenas:2,background_thread:true
 
 # Write GIT commit SHA and TIME to env vars
 ONBUILD ARG COMMIT_SHA

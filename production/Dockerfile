@@ -1,4 +1,4 @@
-FROM ruby:3.3-rc-slim
+FROM ruby:3.4.3-slim
 LABEL maintainer="jiting@jtcat.com"
 
 RUN set -eux; \
@@ -7,7 +7,11 @@ RUN set -eux; \
     postgresql-client \
     tzdata \
     imagemagick \
+    libjemalloc2 \
+    patchelf \
   ; \
+  patchelf --add-needed libjemalloc.so.2 /usr/local/bin/ruby; \
+  apt-get purge -y patchelf; \
 	rm -rf /var/lib/apt/lists/*
 
 # Configure Rails
@@ -22,8 +26,7 @@ EXPOSE 3000
 # This image is for production env only
 ENV RAILS_ENV production
 
-# Set MALLOC_ARENA_MAX to prevent memory fragmentation
-ENV MALLOC_ARENA_MAX 2
+ENV MALLOC_CONF dirty_decay_ms:1000,narenas:2,background_thread:true
 
 # Write GIT commit SHA and TIME to env vars
 ONBUILD ARG COMMIT_SHA
