@@ -1,4 +1,4 @@
-FROM ruby:3.4.3-alpine
+FROM jiting/ruby:3.4.3-alpine
 LABEL maintainer="jiting <jiting@jtcat.com>"
 
 # Add basic packages
@@ -13,12 +13,10 @@ RUN apk add --no-cache \
     imagemagick-dev \
     jpeg-dev \
     libpng-dev \
-    vips \
-    jemalloc \
-    patchelf \
-   ; \
-  patchelf --add-needed libjemalloc.so.2 /usr/local/bin/ruby; \
-  apk del patchelf
+    libyaml-dev \
+    libffi-dev \
+    libxml2-dev \
+    vips
 
 WORKDIR /home/app
 

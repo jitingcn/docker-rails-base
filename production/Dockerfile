@@ -1,4 +1,4 @@
-FROM ruby:3.4.3-slim
+FROM jiting/ruby:3.4.3-slim-bookworm
 LABEL maintainer="jiting@jtcat.com"
 
 RUN set -eux; \
@@ -7,11 +7,9 @@ RUN set -eux; \
     postgresql-client \
     tzdata \
     imagemagick \
-    libjemalloc2 \
-    patchelf \
+    libyaml-dev \
+    libffi-dev \
   ; \
-  patchelf --add-needed libjemalloc.so.2 /usr/local/bin/ruby; \
-  apt-get purge -y patchelf; \
 	rm -rf /var/lib/apt/lists/*
 
 # Configure Rails

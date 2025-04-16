@@ -1,4 +1,4 @@
-FROM ruby:3.4.3-alpine
+FROM jiting/ruby:3.4.3-alpine
 LABEL maintainer="jiting <jiting@jtcat.com>"
 
 # Add basic packages
@@ -6,12 +6,9 @@ RUN apk add --no-cache \
     postgresql-client \
     tzdata \
     file \
-    jemalloc \
-    patchelf \
-  ; \
-  patchelf --add-needed libjemalloc.so.2 /usr/local/bin/ruby; \
-  apk del patchelf
-
+    imagemagick \
+    libyaml \
+    libffi
 
 # Configure Rails
 ENV RAILS_LOG_TO_STDOUT true
