@@ -1,4 +1,4 @@
-FROM jiting/ruby:3.4.3-bookworm
+FROM jiting/ruby:3.4.3-slim-bookworm
 LABEL maintainer="jiting@jtcat.com"
 
 RUN gem install bundler

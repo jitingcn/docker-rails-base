@@ -13,7 +13,7 @@ RUN apk add --no-cache \
     imagemagick-dev \
     jpeg-dev \
     libpng-dev \
-    libyaml-dev \
+    yaml-dev \
     libffi-dev \
     libxml2-dev \
     vips

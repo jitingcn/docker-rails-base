@@ -7,7 +7,7 @@ RUN apk add --no-cache \
     tzdata \
     file \
     imagemagick \
-    libyaml \
+    yaml \
     libffi
 
 # Configure Rails
